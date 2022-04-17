@@ -1,7 +1,7 @@
 import { Serie } from './serie.js';
 import { dataSeries } from './data.js';
 
-let coursesTbody: HTMLElement = document.getElementById('series')!;
+let seriesTableBody: HTMLElement = document.getElementById('series')!;
 let AverageSeassonsText: HTMLElement = document.getElementById('season-average')!;
 
 cargarSeriesATabla(dataSeries);
@@ -14,7 +14,7 @@ function cargarSeriesATabla(series: Serie[]): void {
                            <td><a href="${serie.image}" target="_blank">${serie.name}</a></td>
                            <td>${serie.channel}</td>
                            <td>${serie.seasons}</td>`;
-    coursesTbody.appendChild(trElement);
+    seriesTableBody.appendChild(trElement);
   });
 }
 
